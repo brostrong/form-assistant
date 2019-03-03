@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>客户信息表V1.0</title>
+    <style>
+      h2,h3 {
+        background: linear-gradient(to right, red, blue);
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+      hr {
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        height: 2px;
+        width: 100%;
+        background-image: -webkit-linear-gradient(left , #730cc9, #ff6ed7);
+        background-image: -o-linear-gradient(left , #730cc9, #ff6ed7);
+        background-image: linear-gradient(left , #730cc9, #ff6ed7);
+      }
+      input::-webkit-input-placeholder {
+        font-size: 16px;
+        color: #b42309;
+        }
+      input {
+        height: 30px;
+        BORDER-TOP-STYLE: none;
+        BORDER-RIGHT-STYLE: none;
+        BORDER-LEFT-STYLE: none;
+        BORDER-BOTTOM-STYLE: solid;
+        border-bottom-color: #1E90FF;
+        font-size: 16px;
+      }
+      p {font-size: 18px}
+      button {
+        width: 156px;
+        height: 40px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 1px;
+        background: #1E90FF;
+        outline: none;
+        color: white;
+      }
+    </style>
+    <script> /*关闭浏览器页面时，弹出提醒*/
+    function over() {
+    alert("请将填好的信息交给工作人员。");
+    }
+    window.onbeforeunload = function()
+    {
+      return "关闭页面后，之前填写的信息将会丢失，是否关闭？";
+    }
+    </script>
+  </head>
+  <body>
+    <H2 style="text-align: center">客户信息表</H2><span style="color: #808080;">手机版</span>
+    <hr>
+    <hr>
+    <br>
+  <div>
+    <h3>一、基本信息</h3>
+    <hr>
+    <p>客户姓名：<input type="text" placeholder="张三">
+    </p>
+    <p>
+      贷款用途：<input type="text" placeholder="装修" list="daikuanyongtu" /><br />
+      <datalist id="daikuanyongtu">
+        <option value="装修"></option>
+        <option value="旅游"></option>
+        <option value="教育"></option>
+        <option value="婚庆"></option>
+        <option value="租房"></option>
+        <option value="其他日常消费"></option>
+      </datalist>
+    </p>
+    <p>
+      贷款期数：<input type="text" placeholder="36个月" list="daikuanqishu" />
+      <datalist id="daikuanqishu">
+        <option value="6个月"></option>
+        <option value="12个月"></option>
+        <option value="18个月"></option>
+        <option value="24个月"></option>
+        <option value="36个月"></option>
+        <option style="color:red" value="48个月（仅限优质单位）"></option>
+      </datalist>
+    </p>
+    <p>
+      手机号码：<input type="text" maxlength="11" placeholder="156XXXXXXXX">
+    </p>
+    <p>
+      居住地址：<input type="text" placeholder="成都" size="5" list="city"/> 市
+      <datalist id="city">
+        <option value="成都"></option>
+        <option value="绵阳"></option>
+        <option value="德阳"></option>
+        <option value="南充"></option>
+        <option value="乐山"></option>
+        <option value="眉山"></option>
+        <option value="资阳"></option>
+        <option value="简阳"></option>
+      </datalist>
+      <input type="text" placeholder="武侯" size="5" list="quxian"/> 区
+      <datalist id="quxian">
+        <option value="青羊"></option>
+        <option value="锦江"></option>
+        <option value="金牛"></option>
+        <option value="武侯"></option>
+        <option value="成华"></option>
+        <option value="温江"></option>
+        <option value="双流"></option>
+        <option value="郫都"></option>
+      </datalist><p>
+      <input type="text" placeholder="玉林北路1号蓉城小区1栋1单元1楼1号" style="width: 300px">
+    </p>
+    <p>
+      居住情况：<input type="text" placeholder="自购按揭房" list="juzhuqingkuang">
+      <datalist id="juzhuqingkuang">
+        <option value="自购按揭房"></option>
+        <option value="自购全款房"></option>
+        <option value="租赁居住"></option>
+        <option value="与父母亲属同住"></option>
+        <option value="单位宿舍"></option>
+        <option value="自建房"></option>
+      </datalist><p>
+      居住时间：<input type="text" placeholder="2" size="5" style="text-align: right"> 年 <input type="text" placeholder="6" size="5" style="text-align: right"> 月
+    </p>
+    <p>
+      教育程度：<input type="text" placeholder="大专" list="education">
+      <datalist id="education">
+        <option value="大专"></option>
+        <option value="本科"></option>
+        <option value="高中"></option>
+        <option value="硕士"></option>
+        <option value="博士"></option>
+        <option value="初中及以下"></option>
+      </datalist><p>
+      毕业学校：<input type="text" placeholder="四川大学">
+    </p>
+    <p>
+      婚姻状况：<input type="text" placeholder="已婚无子女" list="marriage">
+      <datalist id="marriage">
+        <option value="已婚有子女"></option>
+        <option value="已婚无子女"></option>
+        <option value="未婚"></option>
+        <option value="离异"></option>
+        <option value="丧偶"></option>
+      </datalist><p>
+      配偶姓名：<input type="text" placeholder="张三"><p>
+      配偶身份证号码：<input type="text" placeholder="510100190011223344"><p>
+      配偶手机号码：<input type="text" placeholder="156XXXXXXXX"><br>
+    </p>
+    <p>
+      有无房贷：<input type="text" placeholder="有房贷" list="house">
+      <datalist id="house">
+        <option value="有房贷"></option>
+        <option value="无房贷"></option>
+      </datalist><p>
+      房产类型：<input type="text" placeholder="住宅" list="house_type">
+      <datalist id="house_type">
+        <option value="住宅商品房"></option>
+        <option value="商铺写字楼"></option>
+      </datalist><p>
+      房产地址：<input type="text" placeholder="成都" size="5" list="city"/> 市
+              <input type="text" placeholder="武侯" size="5" list="quxian"/> 区<p>
+        <input type="text" placeholder="玉林北路1号蓉城小区1栋1单元1楼1号" style="width: 300px"><p></p>
+      小区名字：<input type="text" placeholder="武侯花园"><p>
+      房屋面积：<input type="text" placeholder="80" size="6">平方米<p>
+    </p>
+  </div>
+  <div>
+    <h3>二、职业信息</h3>
+    <hr>
+    <p>
+    工作类型：<input type="text" placeholder="工薪一族" list="work">
+      <datalist id="work">
+        <option value="工薪一族"></option>
+        <option value="创业老板"></option>
+      </datalist>
+    </p>
+    <p>
+      每月收入：<input type="text" placeholder="5000"> 元
+    </p>
+    <p>
+      单位全称：<input type="text" placeholder="成都华为技术有限公司">
+    </p>
+    <p>
+      部门岗位：<input type="text" placeholder="财务部-主管">
+    </p>
+    <p>
+      单位地址：<input type="text" placeholder="成都" size="5" list="city"/> 市
+      <input type="text" placeholder="武侯" size="5" list="quxian"/> 区<p>
+      <input type="text" placeholder="玉林北路1号蓉城小区1栋1单元1楼1号" style="width: 300px">
+    </p>
+    <p>
+      工作年限：<input type="text" placeholder="2" size="3" style="text-align: right"> 年 <input type="text" placeholder="6" size="3" style="text-align: right"> 月
+    </p>
+    <p>
+      单位电话：<input type="text" placeholder="028" size="4"> - <input type="text" placeholder="67170768" size="9"> <!-- - <input type="text" placeholder="1234" size="5">-->
+    </p>
+    <p>
+      单位性质：<input type="text" placeholder="高新技术制造业" list="work_type">
+      <datalist id="work_type">
+        <option value="国家机关/事业单位"></option>
+        <option value="教育行业"></option>
+        <option value="医疗卫生"></option>
+        <option value="银行/证券/保险"></option>
+        <option value="高新技术制造业"></option>
+        <option value="建筑业"></option>
+        <option value="商业贸易"></option>
+        <option value="传媒/体育/娱乐"></option>
+        <option value="酒店/旅游/餐饮"></option>
+        <option value="服务业"></option>
+        <option value="其他"></option>
+      </datalist>
+    </p>
+  </div>
+  <div>
+    <h3>三、联系人信息</h3>
+    <hr>
+    <p>
+      1.与本人关系：<input type="text" placeholder="父母" list="relation" size="4"> 姓名：<input type="text" placeholder="张三" size="4">
+      <datalist id="relation">
+        <option value="父母"></option>
+        <option value="子女"></option>
+        <option value="兄弟姐妹"></option>
+      </datalist>
+    </p>
+    <p>
+      ----电话号码：<input type="text" placeholder="156XXXXXXXX">
+    </p>
+    <p>
+      2.与本人关系：<input type="text" placeholder="父母" list="relation_2" size="4"> 姓名：<input type="text" placeholder="李四" size="4">
+      <datalist id="relation_2">
+        <option value="朋友"></option>
+        <option value="同事"></option>
+        <option value="同学"></option>
+        <option value="亲属"></option>
+      </datalist>
+    </p>
+    <p>
+      ----电话号码：<input type="text" placeholder="156XXXXXXXX">
+    </p>
+  </div>
+  <div>
+    <button onclick="over()" style="">填写完毕</button>
+  </div>
+  <br>
+  <hr>
+  <hr>
+  <p style="font-size: 10px;text-align: center">中邮消费金融线下面签小助手</p>
+  <p></p>
+  </body>
+</html>
