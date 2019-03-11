@@ -55,7 +55,6 @@
     </style>
     <script> /*关闭浏览器页面时，弹出提醒*/
     function over() {
-        alert("请将填好的信息交给工作人员,退出页面将不会保存所填信息。");
         var data = document.getElementById("data1").value + " \n " + document.getElementById("data2").value + " \n " +
             document.getElementById("data3").value + " \n " + document.getElementById("data4").value + " \n " +
             document.getElementById("data5").value + " \n " + document.getElementById("data6").value + " \n " +
@@ -80,6 +79,7 @@
             qrcode.makeCode(data);
         }
         makeCode();
+        alert("请将填好的信息交给工作人员,退出页面将不会保存所填信息。");
     }
     window.onbeforeunload = function()
     {
